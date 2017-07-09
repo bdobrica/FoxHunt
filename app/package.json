@@ -1,0 +1,52 @@
+{
+  "name": "nativescript-template-tutorial",
+  "version": "1.0.1",
+  "main": "app.js",
+  "description": "Template for starting the NativeScript Getting Started Tutorial",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjvantoll/nativescript-template-tutorial.git"
+  },
+  "nativescript": {
+    "id": "org.nativescript.tutorial"
+  },
+  "dependencies": {
+    "nativescript-theme-core": "~1.0.2",
+    "tns-core-modules": "2.5.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-android-snapshot": "^0.*.*"
+  },
+  "gitHead": "419ade0d09c3cafafa7e364a3c4f86967b84cc3f",
+  "bugs": {
+    "url": "https://github.com/tjvantoll/nativescript-template-tutorial/issues"
+  },
+  "homepage": "https://github.com/tjvantoll/nativescript-template-tutorial#readme",
+  "_id": "nativescript-template-tutorial@1.0.1",
+  "scripts": {},
+  "_shasum": "75b8e16014e52f54ab71b2aef50e61ff2e9aa0c9",
+  "_from": "nativescript-template-tutorial@latest",
+  "_npmVersion": "3.10.8",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {
+    "name": "tjvantoll",
+    "email": "tj.vantoll@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "tjvantoll",
+      "email": "tj.vantoll@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "75b8e16014e52f54ab71b2aef50e61ff2e9aa0c9",
+    "tarball": "https://registry.npmjs.org/nativescript-template-tutorial/-/nativescript-template-tutorial-1.0.1.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-template-tutorial-1.0.1.tgz_1485958805992_0.7725413313601166"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nativescript-template-tutorial/-/nativescript-template-tutorial-1.0.1.tgz",
+  "readme": "ERROR: No README data found!"
+}

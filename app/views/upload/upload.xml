@@ -1,0 +1,13 @@
+<Page loaded="foxHuntInit">
+    <GridLayout rows="*,auto,auto,auto" columns="3*,*">
+        <ListView items="{{ ImgList }}" itemTap="foxHuntTap" row="0" colSpan="2">
+            <ListView.itemTemplate>
+                <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" />
+            </ListView.itemTemplate>
+        </ListView>
+        <Label text="100%" row="1" col="0" />
+        <Button class="primary fa" text="&#xf0ee;" tap="foxHuntStartUpload" row="1" col="1" />
+        <Label class="warning rounded" text="{{ locName }}" verticalAlignment="center" row="2" colSpan="2" />
+        <Button class="info fa" text="&#xf030;  Take Photo" tap="foxHuntTakePhoto" row="3" colSpan="2"/>
+    </GridLayout>
+</Page>

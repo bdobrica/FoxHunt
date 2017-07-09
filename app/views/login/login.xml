@@ -1,0 +1,8 @@
+<Page loaded="foxHuntInit">
+    <GridLayout rows="*,auto,auto,auto" cols="*">
+        <Image src="~/images/fox-hunt.png" row="0" col="0" />
+        <TextField id="phone" text="{{ phone }}" hint="Phone Number" keyboardType="phone" autocorect="false" autocapitalization="none" row="1" col="0" />
+        <TextField id="password" text="{{ password }}" hint="Password" secure="true" row="2" col="0" />
+        <Button text="&#xf007;  Sign in" class="warning fa" tap="foxHuntSignIn" row="3" col="0" />
+    </GridLayout>
+</Page>

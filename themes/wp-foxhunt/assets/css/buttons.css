@@ -1,0 +1,22 @@
+/*
+Name: sd-buttons
+Dependencies: sales-drive
+*/
+.btn-success { background-color: #008080; }
+.btn-success:hover, .btn-success:focus, .btn-succes:active, .btn-success.active { background-color: #006060; }
+.btn-info { background-color: #ff6600; }
+.btn-info:hover, .btn-info:focus, .btn-succes:active, .btn-info.active { background-color: #df4600; }
+.btn-danger { background-color: #d40000; }
+.btn-danger:hover, .btn-danger:focus, .btn-succes:active, .btn-danger.active { background-color: #b40000; }
+
+/*
+.select-info .select2-choice { color: #ffffff; background-color: #008080; }
+.select-info .select2-choice:hover, .select-info .select2-choice.hover, .select-info .select2-choice:focus, .select-info .select2-choice:active { color: #ffffff; background-color: #006060; border-color: #006060; }
+.select-info .select2-choice:active { background: #006060; border-color: #006060; }
+.select2-container-disabled.select-info .select2-choice,
+.select2-container-disabled.select-info .select2-choice:hover,
+.select2-container-disabled.select-info .select2-choice:focus,
+.select2-container-disabled.select-info .select2-choice:active { background-color: #bdc3c7; border-color: #3498db; }
+.select-info .select2-choice .select2-arrow { border-top-color: #ffffff; }
+.select2-drop .select2-highlighted > .select2-result-label { background-color: #009a9a; }
+*/

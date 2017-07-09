@@ -1,0 +1,15 @@
+<Page loaded="foxHuntInit" unloaded="foxHuntTerm">
+    <GridLayout rows="auto,auto,*" columns="2*,*">
+        <TextField id="search" class="control" text="{{ GeoSearch }}" hint="Enter location name ..." row="0" col="0" />
+        <Button class="primary fa" text="&#xf002;  Find" tap="foxHuntSearch" row="0" col="1" />
+        <Button class="info fa" text="&#xf279;  Phone Location" tap="foxHuntLocator" row="1" colSpan="2" />
+        <ListView items="{{ GeoList }}" itemTap="foxHuntItemTap" row="2" colSpan="2">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto" columns="2*,*" class="{{ selected ? 'primary' : '' }}">
+                    <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" row="0" col="0" />
+                    <Label text="&#xf061;" class="fa" row="0" col="1" horizontalAlignment="right" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>
