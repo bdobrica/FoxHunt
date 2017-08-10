@@ -23,11 +23,11 @@ for (var c = 0; c < takenImagesRaw.length; c++) {
     takenImages[takenImagesRaw[c].id] = takenImagesRaw[c];
 }
 
-if (debug) console.log(JSON.stringify(takenImagesRaw));
+var debug = false;
 
 var ImgList = new ObservableArray(db.executeQuery("geoimages"));
 
-var debug = true;
+if (debug) console.log(JSON.stringify(takenImagesRaw));
 
 function GeoImages () {
     var viewModel = new observableModule.fromObject({

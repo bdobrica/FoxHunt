@@ -19,8 +19,7 @@ exports.foxHuntSignIn = function () {
         frameModule.topmost().navigate("views/list/list");
     })
     .catch(function(error){
-        //if (debug) 
-            console.log(error.message);
+        if (debug) console.log(error.message);
         dialogsModule.alert("Unfortunately we could not find your account.");
     });
 };
