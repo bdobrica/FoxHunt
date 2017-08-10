@@ -26,3 +26,10 @@ Label { margin: 10; padding: 10; }
 .fa { font-family: "FontAwesome"; }
 /** Helper */
 .rounded { border-radius: 2; margin: 10 14 5; padding: 7; }
+/** Animation */
+@keyframes fade {
+    0% { background-color: #f4d313; }
+    50% { background-color: #ec7063; }
+    100% { background-color: #f4d313; }
+}
+.loading { animation-name: fade; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: ease-out; }

@@ -4,6 +4,7 @@ var dialogsModule = require("ui/dialogs");
 var frameModule = require("ui/frame");
 var application = require("application");
 var geoUnits = new GeoUnitsViewModel();
+var debug = false;
 
 /*var activity = applicationModule.android.startActivity ||
         applicationModule.android.foregroundActivity ||
@@ -16,7 +17,8 @@ var backEvent = function(args) {
         geoUnits.back();
     }
     catch (error) {
-        frameModule.topmost().navigate("views/login/login");
+        frameModule.topmost().navigate("views/list/list");
+        //frameModule.topmost().navigate("views/login/login");
     }
 };
 
@@ -25,6 +27,8 @@ exports.foxHuntInit = function(args) {
     page.bindingContext = geoUnits;
     if (application.android)
         application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
+
+    if (debug) console.log (geoUnits.parentGeoUnits);
 };
 
 exports.foxHuntTerm = function(args) {
@@ -33,20 +37,25 @@ exports.foxHuntTerm = function(args) {
 };
 
 exports.foxHuntSearch = function(args) {
-    console.log("Search ...");
+    if (debug) console.log("Search ...");
     try {
-        geoUnits.search(args, page.getViewById("search"));
+        geoUnits.search(args, page.getViewById("search").text);
     }
     catch(error){
+        dialogsModule.alert ("Could not find location!");
     }
 };
 
 exports.foxHuntLocator = function(args){
-    console.log("Locate ...");
+    if (debug) console.log(args.object.className);
+    args.object.className = 'warning fa';
+    if (debug) console.log(args.object.className);
+    if (debug) console.log("Locate ...");
     try {
         geoUnits.locate(args);
     }
     catch(error) {
+        btn.className = 'info fa';
     }
 };
 

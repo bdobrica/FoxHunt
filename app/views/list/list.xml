@@ -5,9 +5,12 @@
         <Button class="info fa" text="&#xf279;  Phone Location" tap="foxHuntLocator" row="1" colSpan="2" />
         <ListView items="{{ GeoList }}" itemTap="foxHuntItemTap" row="2" colSpan="2">
             <ListView.itemTemplate>
-                <GridLayout rows="auto" columns="2*,*" class="{{ selected ? 'primary' : '' }}">
-                    <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" row="0" col="0" />
-                    <Label text="&#xf061;" class="fa" row="0" col="1" horizontalAlignment="right" />
+                <GridLayout rows="auto" columns="3*,auto,auto,auto,*" class="{{ selected ? 'primary' : '' }}">
+                    <Label text="{{ name }}" class="item" horizontalAlignment="left" verticalAlignment="center" row="0" col="0" />
+                    <Label text="{{ p }}" class="item-number" horizontalAlignment="center" verticalAlignment="center" row="0" col="1" />
+                    <Label text=" / " class="item-number" horizontalAlignment="center" verticalAlignment="center" row="0" col="2" />
+                    <Label text="{{ r }}" class="item-number" horizontalAlignment="center" verticalAlignment="center" row="0" col="3" />
+                    <Label text="&#xf061;" class="fa" row="0" col="4" horizontalAlignment="right" />
                 </GridLayout>
             </ListView.itemTemplate>
         </ListView>

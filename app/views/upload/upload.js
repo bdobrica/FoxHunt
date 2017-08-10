@@ -9,48 +9,36 @@ var bghttp = require("nativescript-background-http");
 var config = require("../../shared/config");
 var enums = require("ui/enums");
 var db = require("../../shared/couchbase");
+var frameModule = require("ui/frame");
+var application = require("application");
+
 
 var session = bghttp.session("image-upload");
 
 var GeoImagesViewModel = require("../../shared/view-models/geoimages-view-model");
 var geoImages = new GeoImagesViewModel();
-/*
-var extractImageName = function(fileUri) {
-    var pattern = /[^/]*$/;
-    var imageName = fileUri.match(pattern);
-    return imageName;
+
+var backEvent = function(args) {
+    args.cancel = true;
+    try {
+        geoImages.back();
+    }
+    catch (error) {
+    }
+    frameModule.topmost().navigate("views/list/list");
 };
-
-var foxUploadImages = function(path){
-    var imageName = extractImageName(path);
-    var parameters = {};
-
-    var request = {
-        url: config.apiUrl + '?f=upload&p=' + escape(JSON.stringify(parameters)),
-        method: "POST",
-        headers: {
-            "Content-Type": "application/octet-stream",
-            "File-Name": imageName
-        }
-    };
-
-    var task = session.uploadFile(path, request);
-
-    var logEvent = function(e){
-        console.log(JSON.stringify(this));
-        console.log(JSON.stringify(e));
-    };
-    task.on("progress", logEvent);
-    task.on("error", logEvent);
-    task.on("complete", logEvent);
-
-    return task;
-};
-*/
 
 exports.foxHuntInit = function(args){
     page = args.object;
     page.bindingContext = geoImages;
+    geoImages.set('locName', config.selectedGeoUnit.locName);
+    if (application.android)
+        application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);
+};
+
+exports.foxHuntTerm = function(args) {
+    if (application.android)
+        application.android.off(application.AndroidApplication.activityBackPressedEvent, backEvent);
 };
 
 exports.foxHuntStartUpload = function(args){

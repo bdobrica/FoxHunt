@@ -1,4 +1,4 @@
-<Page loaded="foxHuntInit">
+<Page loaded="foxHuntInit" unloaded="foxHuntTerm">
     <GridLayout rows="*,auto,auto,auto" columns="3*,*">
         <ListView items="{{ ImgList }}" itemTap="foxHuntTap" row="0" colSpan="2">
             <ListView.itemTemplate>
